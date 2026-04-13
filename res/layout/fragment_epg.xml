@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/fragment_epg_0" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@id/vertical_line" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.5" />
+    <View android:id="@id/view_tap" android:layout_width="0.0dp" android:layout_height="match_parent" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="@id/vertical_line" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <ViewSwitcher android:id="@id/view_switcher" android:layout_width="0.0dp" android:layout_height="match_parent" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@id/vertical_line" app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout android:background="@color/black_80" android:layout_width="match_parent" android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.Guideline android:orientation="horizontal" android:id="@id/horizontal_line2" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.35" />
+            <LinearLayout android:orientation="vertical" android:id="@id/lay_description" android:layout_width="0.0dp" android:layout_height="0.0dp" android:layout_marginLeft="@dimen/_5sdp" android:layout_marginTop="@dimen/_3sdp" android:layout_marginRight="@dimen/_5sdp" android:layout_marginHorizontal="@dimen/_5sdp" app:layout_constraintBottom_toBottomOf="@id/horizontal_line2" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/stream_icon" android:layout_width="@dimen/_20sdp" android:layout_height="@dimen/_20sdp" android:src="@drawable/heart_fav" android:layout_marginEnd="@dimen/_5sdp" />
+                    <TextView android:textSize="@dimen/_10ssp" android:textStyle="bold" android:textColor="@color/white_60" android:id="@id/txt_channel_name" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <TextView android:textSize="@dimen/_12ssp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/txt_program_name" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:id="@id/lay_duration" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="@dimen/_8ssp" android:textColor="@color/start_date_color" android:id="@id/txt_start_time" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        <TextView android:textColor="@color/white_60" android:id="@id/txt_separator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" - " />
+                        <TextView android:textSize="@dimen/_8ssp" android:textColor="@color/end_date_color" android:id="@id/txt_end_time" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <ImageView android:id="@id/im_clock" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/_3sdp" android:layout_marginTop="1.0sp" android:layout_marginRight="@dimen/_3sdp" android:src="@drawable/clock" android:layout_marginHorizontal="@dimen/_3sdp" app:tint="@color/white" />
+                    <TextView android:textSize="@dimen/_8sdp" android:textColor="@color/white" android:id="@id/tv_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <ScrollView android:id="@id/scrollview_description" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <TextView android:textSize="@dimen/_8ssp" android:textColor="@color/white_60" android:id="@id/txt_description" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                </ScrollView>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/lay_epg" android:layout_width="0.0dp" android:layout_height="0.0dp" android:layout_marginLeft="@dimen/_5sdp" android:layout_marginTop="@dimen/_3sdp" android:layout_marginRight="@dimen/_5sdp" android:layout_marginHorizontal="@dimen/_5sdp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/horizontal_line2">
+                <ib.player.base.view.LiveHorizontalGridView android:id="@id/recycler_date" android:nextFocusLeft="@id/recycler_channel" android:nextFocusDown="@id/recycler_programs" android:layout_width="match_parent" android:layout_height="@dimen/_25sdp" />
+                <ib.player.base.view.LiveVerticalGridView android:id="@id/recycler_programs" android:nextFocusLeft="@id/recycler_channel" android:nextFocusUp="@id/recycler_date" android:layout_width="match_parent" android:layout_height="match_parent" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <pl.droidsonroids.gif.GifImageView android:id="@id/image_loader" android:layout_width="@dimen/_55sdp" android:layout_height="@dimen/_55sdp" android:src="@drawable/loader" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ViewSwitcher>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,101 @@
+.class public final Lr0/B;
+.super Ljava/lang/Object;
+
+
+# instance fields
+.field public final a:Landroidx/media3/common/Format;
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
+
+.field public final i:Li0/a;
+
+.field public final j:Z
+
+.field public final k:Z
+
+.field public final l:Z
+
+
+# direct methods
+.method public constructor <init>(Landroidx/media3/common/Format;IIIIIIILi0/a;ZZZ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lr0/B;->a:Landroidx/media3/common/Format;
+
+    iput p2, p0, Lr0/B;->b:I
+
+    iput p3, p0, Lr0/B;->c:I
+
+    iput p4, p0, Lr0/B;->d:I
+
+    iput p5, p0, Lr0/B;->e:I
+
+    iput p6, p0, Lr0/B;->f:I
+
+    iput p7, p0, Lr0/B;->g:I
+
+    iput p8, p0, Lr0/B;->h:I
+
+    iput-object p9, p0, Lr0/B;->i:Li0/a;
+
+    iput-boolean p10, p0, Lr0/B;->j:Z
+
+    iput-boolean p11, p0, Lr0/B;->k:Z
+
+    iput-boolean p12, p0, Lr0/B;->l:Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Lr0/m;
+    .locals 7
+
+    new-instance v0, Lr0/m;
+
+    iget v1, p0, Lr0/B;->c:I
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_0
+
+    :goto_0
+    move v5, v2
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v2, 0x0
+
+    goto :goto_0
+
+    :goto_1
+    iget v6, p0, Lr0/B;->h:I
+
+    iget v1, p0, Lr0/B;->g:I
+
+    iget v2, p0, Lr0/B;->e:I
+
+    iget v3, p0, Lr0/B;->f:I
+
+    iget-boolean v4, p0, Lr0/B;->l:Z
+
+    invoke-direct/range {v0 .. v6}, Lr0/m;-><init>(IIIZZI)V
+
+    return-object v0
+.end method

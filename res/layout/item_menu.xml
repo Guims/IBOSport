@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/lay_root" android:background="@drawable/menu_bg" android:paddingLeft="@dimen/_5sdp" android:paddingTop="@dimen/_2sdp" android:paddingRight="@dimen/_5sdp" android:paddingBottom="@dimen/_2sdp" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/_10sdp" android:paddingHorizontal="@dimen/_5sdp" android:paddingVertical="@dimen/_2sdp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/im_icon" android:layout_width="@dimen/_20sdp" android:layout_height="@dimen/_20sdp" android:src="@drawable/icon_live" />
+    <TextView android:textSize="@dimen/menu_text_size" android:textColor="@color/light_trans_gray" android:ellipsize="marquee" android:id="@id/tv_body" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/search" android:singleLine="true" android:layout_weight="1.0" android:marqueeRepeatLimit="marquee_forever" android:layout_marginStart="@dimen/_10sdp" />
+</LinearLayout>

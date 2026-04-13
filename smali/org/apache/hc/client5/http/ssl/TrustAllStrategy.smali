@@ -1,0 +1,47 @@
+.class public Lorg/apache/hc/client5/http/ssl/TrustAllStrategy;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lorg/apache/hc/core5/ssl/TrustStrategy;
+
+
+# annotations
+.annotation build Lorg/apache/hc/core5/annotation/Contract;
+    threading = .enum Lorg/apache/hc/core5/annotation/ThreadingBehavior;->STATELESS:Lorg/apache/hc/core5/annotation/ThreadingBehavior;
+.end annotation
+
+
+# static fields
+.field public static final INSTANCE:Lorg/apache/hc/client5/http/ssl/TrustAllStrategy;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lorg/apache/hc/client5/http/ssl/TrustAllStrategy;
+
+    invoke-direct {v0}, Lorg/apache/hc/client5/http/ssl/TrustAllStrategy;-><init>()V
+
+    sput-object v0, Lorg/apache/hc/client5/http/ssl/TrustAllStrategy;->INSTANCE:Lorg/apache/hc/client5/http/ssl/TrustAllStrategy;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public isTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)Z
+    .locals 0
+
+    const/4 p1, 0x1
+
+    return p1
+.end method

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="40.0dp" android:width="41.0dp" android:viewportWidth="41.0" android:viewportHeight="40.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$icon_reload__0" android:pathData="M10.026,0L30.391,0A10,10 0,0 1,40.391 10L40.391,30A10,10 0,0 1,30.391 40L10.026,40A10,10 0,0 1,0.026 30L0.026,10A10,10 0,0 1,10.026 0z" android:fillAlpha="0.05" />
+    <path android:fillColor="#00000000" android:pathData="M26.776,14.938L25.786,13.786C24.947,12.904 23.937,12.203 22.817,11.724C21.698,11.245 20.493,10.998 19.276,11C14.307,11 10.276,15.031 10.276,20C10.276,24.969 14.307,29 19.276,29C21.138,29 22.953,28.423 24.473,27.348C25.993,26.274 27.143,24.755 27.764,23" android:strokeColor="#ffffffff" android:strokeWidth="1.5" android:strokeLineCap="round" />
+    <path android:fillColor="#ffffffff" android:pathData="M29.776,12.566V17.75C29.776,17.949 29.697,18.14 29.556,18.28C29.416,18.421 29.225,18.5 29.026,18.5H23.843C23.174,18.5 22.84,17.692 23.312,17.22L28.496,12.036C28.968,11.563 29.776,11.898 29.776,12.566Z" />
+</vector>

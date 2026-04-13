@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true" android:state_pressed="true" android:drawable="@drawable/live_item_focus_bg" />
+    <item android:state_focused="true" android:drawable="@drawable/live_item_focus_bg" />
+    <item android:state_pressed="true" android:drawable="@drawable/live_item_focus_bg" />
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/_4sdp" />
+            <gradient android:startColor="@color/white_5" android:endColor="@color/white_4" android:angle="0.0" />
+        </shape>
+    </item>
+</selector>

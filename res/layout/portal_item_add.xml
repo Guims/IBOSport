@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/img_icon" android:background="@drawable/portal_bg" android:padding="@dimen/_10sdp" android:layout_width="@dimen/_50sdp" android:layout_height="@dimen/_50sdp" android:layout_margin="@dimen/_10sdp" android:src="@drawable/icons_plus" android:scaleX="0.9" android:scaleY="0.9" app:tint="@color/white" />
+    <TextView android:textSize="@dimen/_9sdp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/txt_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add Playlist" />
+</LinearLayout>

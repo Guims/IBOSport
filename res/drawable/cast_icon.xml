@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="120.0dp" android:width="120.0dp" android:viewportWidth="120.0" android:viewportHeight="120.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$cast_icon__0" android:pathData="M60,60m-60,0a60,60 0,1 1,120 0a60,60 0,1 1,-120 0" />
+    <path android:fillColor="@color/colorPrimary" android:pathData="M48.04,67.08C44.92,68.94 36.74,72.73 41.72,77.48C44.16,79.8 46.87,81.46 50.28,81.46H69.72C73.13,81.46 75.84,79.8 78.28,77.48C83.26,72.73 75.08,68.94 71.96,67.08C64.64,62.72 55.36,62.72 48.04,67.08Z" />
+    <path android:fillColor="@color/colorPrimary" android:pathData="M69.92,48.87C69.92,54.35 65.48,58.79 60,58.79C54.52,58.79 50.08,54.35 50.08,48.87C50.08,43.39 54.52,38.95 60,38.95C65.48,38.95 69.92,43.39 69.92,48.87Z" />
+</vector>

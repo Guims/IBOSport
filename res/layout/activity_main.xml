@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/drawer_layout" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/linearLayout5" android:layout_width="match_parent" android:layout_height="match_parent">
+        <FrameLayout android:id="@id/frameLayout" android:layout_width="match_parent" android:layout_height="match_parent" />
+        <RelativeLayout android:id="@id/view_menu" android:layout_width="@dimen/_40sdp" android:layout_height="match_parent" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <ImageView android:id="@id/im_icon" android:layout_width="@dimen/_32sdp" android:layout_height="@dimen/_18sdp" android:layout_marginTop="@dimen/_10sdp" android:layout_marginBottom="@dimen/_10sdp" android:src="@drawable/trans_logo" android:layout_alignParentTop="true" android:layout_marginStart="@dimen/_8sdp" />
+            <LinearLayout android:layout_width="@dimen/_20sdp" android:layout_height="wrap_content" android:layout_above="@id/layoutBottom" android:layout_below="@id/im_icon" android:layout_marginStart="@dimen/_5sdp">
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/icon_recyclerview" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/layoutBottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/_10sdp" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/_5sdp" android:layout_alignParentStart="true">
+                <ImageView android:id="@id/im_account" android:layout_width="@dimen/_20sdp" android:layout_height="@dimen/_20sdp" android:layout_marginBottom="@dimen/_2sdp" android:src="@drawable/icon_account_selector" />
+                <RelativeLayout android:id="@id/lay_settings" android:layout_width="@dimen/_20sdp" android:layout_height="@dimen/_20sdp" android:layout_marginBottom="@dimen/_2sdp">
+                    <ImageView android:id="@id/im_settings" android:layout_width="@dimen/_20sdp" android:layout_height="@dimen/_20sdp" android:src="@drawable/icon_settings_selector" />
+                    <ImageView android:id="@id/im_update_icon" android:visibility="gone" android:layout_width="@dimen/_5sdp" android:layout_height="@dimen/_5sdp" android:src="@drawable/red_circle" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <ImageView android:id="@id/im_exit" android:layout_width="@dimen/_20sdp" android:layout_height="@dimen/_20sdp" android:src="@drawable/icon_exit_selector" />
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/lay_clock" android:paddingTop="@dimen/_10sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:paddingEnd="@dimen/_10sdp" android:layout_alignParentEnd="true">
+            <TextView android:textSize="@dimen/_10sdp" android:textStyle="bold" android:id="@id/textDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/_5sdp" />
+            <TextClock android:textSize="@dimen/_10sdp" android:textStyle="bold" android:id="@id/textClock" android:layout_width="wrap_content" android:layout_height="wrap_content" android:format12Hour="hh:mm a" android:format24Hour="HH:mm" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/lay_drawer" android:layout_width="0.0dp" android:layout_height="match_parent" app:layout_constraintEnd_toStartOf="@id/guideline14" app:layout_constraintStart_toStartOf="@id/guideline13">
+        <View android:background="@color/black" android:layout_width="@dimen/_10sdp" android:layout_height="match_parent" />
+        <LinearLayout android:orientation="vertical" android:background="@drawable/dw_gradient_black" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@id/im_profile" android:layout_width="@dimen/_32sdp" android:layout_height="@dimen/_18sdp" android:layout_marginTop="@dimen/_10sdp" android:layout_marginBottom="@dimen/_5sdp" android:src="@drawable/trans_logo" />
+            </LinearLayout>
+            <ib.player.base.view.LiveVerticalGridView android:id="@id/menu_recyclerview" android:layout_width="match_parent" android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@id/guideline13" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="-0.3" />
+    <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@id/guideline14" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.0" />
+    <pl.droidsonroids.gif.GifImageView android:id="@id/image_loader" android:visibility="gone" android:layout_width="@dimen/_55sdp" android:layout_height="@dimen/_55sdp" android:layout_marginTop="@dimen/_20sdp" android:src="@drawable/loader" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

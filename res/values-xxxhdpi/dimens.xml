@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="border_width">@dimen/_1sdp</dimen>
+    <dimen name="epg_text_size">@dimen/_11sdp</dimen>
+    <dimen name="home_image_size">@dimen/_11sdp</dimen>
+    <dimen name="home_medium_txt_size">@dimen/_7sdp</dimen>
+    <dimen name="home_small_txt_size">@dimen/_6sdp</dimen>
+    <dimen name="home_text_size">@dimen/_13sdp</dimen>
+    <dimen name="home_title_size">@dimen/_15sdp</dimen>
+    <dimen name="item_number_size">@dimen/_9sdp</dimen>
+    <dimen name="item_season_height">@dimen/_110sdp</dimen>
+    <dimen name="item_season_image_height">@dimen/_95sdp</dimen>
+    <dimen name="item_season_width">@dimen/_70sdp</dimen>
+    <dimen name="item_text_size">@dimen/_10sdp</dimen>
+    <dimen name="item_vod_image_height">@dimen/_115sdp</dimen>
+    <dimen name="menu_text_size">@dimen/_14sdp</dimen>
+    <dimen name="padding_small">@dimen/_2sdp</dimen>
+    <dimen name="padding_small_vertical">@dimen/_3sdp</dimen>
+</resources>

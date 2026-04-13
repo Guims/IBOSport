@@ -1,0 +1,7 @@
+.class public interface abstract LI/a;
+.super Ljava/lang/Object;
+
+
+# virtual methods
+.method public abstract accept(Ljava/lang/Object;)V
+.end method

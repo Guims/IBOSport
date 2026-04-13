@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/_3sdp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="@dimen/_70sdp" android:layout_height="@dimen/_70sdp">
+        <ImageView android:id="@id/img_icon" android:background="@drawable/portal_bg" android:padding="@dimen/_10sdp" android:layout_width="@dimen/_70sdp" android:layout_height="@dimen/_70sdp" android:src="@drawable/image_audio" android:scaleX="0.9" android:scaleY="0.9" app:tint="@color/colorPrimary" />
+        <ImageView android:id="@id/img_check" android:layout_width="@dimen/_12sdp" android:layout_height="@dimen/_12sdp" android:layout_margin="@dimen/_5sdp" android:src="@drawable/ic_connected" android:layout_alignParentTop="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/_9sdp" android:textStyle="bold" android:textColor="@color/gray" android:id="@id/txt_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="test" android:singleLine="true" />
+    <TextView android:textSize="@dimen/_6sdp" android:textColor="@color/white" android:id="@id/txt_expired" android:background="@drawable/home_item_bg_unfocused" android:paddingLeft="@dimen/_3sdp" android:paddingTop="@dimen/_1sdp" android:paddingRight="@dimen/_3sdp" android:paddingBottom="@dimen/_1sdp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:paddingHorizontal="@dimen/_3sdp" android:paddingVertical="@dimen/_1sdp" />
+</LinearLayout>
