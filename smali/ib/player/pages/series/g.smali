@@ -227,6 +227,21 @@
     goto :goto_5
 
     :cond_9
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v4
+
+    if-ne v4, v5, :cond_9a
+
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-virtual {p0, v4}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_5
+
+    :cond_9a
     move-object v1, v2
 
     :goto_5
