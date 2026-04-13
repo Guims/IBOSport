@@ -24,6 +24,172 @@
     return-void
 .end method
 
+.method public static a(Lib/player/pages/series/h;Lib/player/models/EpisodeModel;II)V
+    .locals 10
+
+    if-eqz p0, :cond_d
+
+    if-nez p1, :cond_0
+
+    goto/16 :goto_6
+
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lib/player/base/BaseFragment;->j0:Lib/player/base/helper/w;
+
+    if-eqz v0, :cond_d
+
+    invoke-virtual {v0}, Lib/player/base/helper/w;->B()Z
+
+    move-result v1
+
+    if-nez v1, :cond_d
+
+    iget-object v1, p0, Lib/player/pages/series/h;->r0:Lib/player/models/SeriesModel;
+
+    if-eqz v1, :cond_d
+
+    invoke-virtual {v1}, Lib/player/models/SeriesModel;->getTmdb()Ljava/lang/String;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_d
+
+    invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_d
+
+    invoke-virtual {v0}, Lib/player/base/helper/w;->v()Lib/player/models/AppInfoModel;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_d
+
+    invoke-virtual {v0}, Lib/player/models/AppInfoModel;->getTmdbKey()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_d
+
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_d
+
+    invoke-virtual {p1}, Lib/player/models/EpisodeModel;->getInfo()Lib/player/models/EpisodeInfoModel;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v2}, Lib/player/models/EpisodeInfoModel;->getMovie_image()Ljava/lang/String;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v3}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    goto/16 :goto_6
+
+    :cond_1
+    if-nez v2, :cond_2
+
+    new-instance v2, Lib/player/models/EpisodeInfoModel;
+
+    invoke-direct {v2}, Lib/player/models/EpisodeInfoModel;-><init>()V
+
+    invoke-virtual {p1, v2}, Lib/player/models/EpisodeModel;->setInfo(Lib/player/models/EpisodeInfoModel;)V
+
+    :cond_2
+    move v3, p3
+
+    invoke-virtual {p1}, Lib/player/models/EpisodeModel;->getEpisode_num()Ljava/lang/String;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_3
+
+    invoke-virtual {v4}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v5
+
+    if-nez v5, :cond_3
+
+    invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v3
+
+    :cond_3
+    const-string v4, "https://api.themoviedb.org/3/tv/"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "/season/"
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p2, "/episode/"
+
+    invoke-virtual {v5, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p2, "?api_key="
+
+    invoke-virtual {v5, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, "&language=en-US"
+
+    invoke-virtual {v5, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {v4}, Lu4/b;->a(Ljava/lang/String;)Lu4/a;
+
+    move-result-object p3
+
+    invoke-interface {p3, p2}, Lu4/a;->v(Ljava/lang/String;)Lretrofit2/Call;
+
+    move-result-object p2
+
+    new-instance p3, Lib/player/pages/series/s;
+
+    invoke-direct {p3, p1}, Lib/player/pages/series/s;-><init>(Lib/player/models/EpisodeModel;)V
+
+    invoke-interface {p2, p3}, Lretrofit2/Call;->enqueue(Lretrofit2/Callback;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_6
+
+    :catch_0
+    move-exception p0
+
+    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+
+    :cond_d
+    :goto_6
+    return-void
+.end method
+
 
 # virtual methods
 .method public final onFailure(Lretrofit2/Call;Ljava/lang/Throwable;)V
@@ -345,6 +511,12 @@
     :catch_2
     :cond_4
     :try_start_5
+    add-int/lit8 v0, v16, 0x1
+
+    add-int/lit8 v17, v15, 0x1
+
+    invoke-static {v14, v1, v0, v17}, Lib/player/pages/series/g;->a(Lib/player/pages/series/h;Lib/player/models/EpisodeModel;II)V
+
     invoke-virtual {v10, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v15, v15, 0x1
@@ -522,6 +694,10 @@
     :catch_3
     :cond_8
     :try_start_9
+    add-int/lit8 v0, v10, 0x1
+
+    invoke-static {v14, v1, v15, v0}, Lib/player/pages/series/g;->a(Lib/player/pages/series/h;Lib/player/models/EpisodeModel;II)V
+
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_9
     .catch Lorg/json/JSONException; {:try_start_9 .. :try_end_9} :catch_5
